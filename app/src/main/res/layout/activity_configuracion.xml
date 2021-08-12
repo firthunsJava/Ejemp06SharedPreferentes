@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfiguracionActivity">
+
+    <EditText
+        android:id="@+id/txtNombreConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtDireccionConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Direccion"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtNombreConfig"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreConfig" />
+
+    <Switch
+        android:id="@+id/swCasadoConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="48dp"
+        android:text="Casado"
+        app:layout_constraintBottom_toTopOf="@+id/cFechaNacimientoConfig"
+        app:layout_constraintEnd_toEndOf="@+id/rbGroupConfig" />
+
+    <CalendarView
+        android:id="@+id/cFechaNacimientoConfig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="31dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <RadioGroup
+        android:id="@+id/rbGroupConfig"
+        android:layout_width="121dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/swCasadoConfig"
+        app:layout_constraintEnd_toEndOf="@+id/txtDireccionConfig"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccionConfig">
+
+        <RadioButton
+            android:id="@+id/rbMujerConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mujer" />
+
+        <RadioButton
+            android:id="@+id/rbHombreConfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hombre" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
